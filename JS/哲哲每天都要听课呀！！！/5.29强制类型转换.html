@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+
+/*强制数据类型转换
+    指将一个数据类型转换为其他数据类型
+    类型转换主要指将其他数据类型转换为String  Number  Boolean*/
+
+    // 将其他数据类型转换为String
+    // 方式一：调用被转换类型的数据类型的toString()方法  该方法不会影响原变量 会将转换的方法返回
+                    // 调用xxx的yyy的方法  就是xxx.yyy
+                    // 注意null和undefined这两个值没有tostring()方法  如果调用这个方法会报错
+    var a=123;
+    a.toString();
+    console.log(a)
+    // 方式二：调用String()函数 并将被转换的数据作为参数传递给函数
+    a = 123;
+    a = String(a);
+
+// 将其他数据类型转换为Number
+// 方式一：使用Number()函数
+                    // 情况1：字符串 ------数值
+                        // 纯数字字符串直接转为数字  非纯数字字符串转换为NaN
+                        // 如果字符串是一个空串 或全是空格的字符串 则转换为0
+                    // 情况2： 布尔值------数值
+                        // ture转换为1    false转换为0
+                    // 情况3： Null/undefined------数值 
+                        // 都转为0  
+var a = 123;
+console.log(a);
+a = Number(a);
+// 方式二：这种方式专门用来对付字符串 parseInt() 把一个字符串转换为一个整数   parsefloat()把一个字符串转换为一个浮点数
+a = "23px";
+a = parseInt(a);
+        // parsefloat()作用和parseInt()作用相同  不同的是他获取的是有效的小数
+a="123.456";
+a = parseFloat(a);
+        // 如果对非String使用parseInt或parseFloat  它会将其先转换为String之后再操作
+a =true;
+a = parseInt(a);
+
+// 将其他数据类型转换为Boolean
+// 使用Boolean()函数
+var a =123;
+console.log(a);
+a = Boolean(a);
+// 数字------布尔值
+// 除了0和NaN其余的都是ture
+// 字符串-------布尔值
+// 除了空串其余都是ture
+// Null和undefined都是false
+//  0 NaN "" Null Undefined 
+// Object转换为ture
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>    

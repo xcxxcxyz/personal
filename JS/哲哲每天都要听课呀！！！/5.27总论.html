@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 可以将js代码写在js标签中 -->
+    <script>
+        alert("你点我哦？？");
+    </script>
+    <!-- 可以从外部的js文件中引入js代码  一旦引入外部文件 就不能再内部编写了  即使编写
+        也会忽略-->
+    <script src="文件名"></script>
+
+      <!-- 在js中使用var来声明一个变量 -->
+      <script>
+            var a;
+            a=123;
+            console.log(a);
+
+        // 声明和赋值同时进行
+        var b=456;
+        console.log(b);
+
+        // 通过变量对字面量进行描述
+        var age=89
+        console.log(age)
+              </script>
+
+    
+</head>
+<body>
+    <!-- 不推荐将js代码写在标签中，不方便维护 -->
+    <!-- 点完按钮之后弹出弹框 -->
+    <button onclick="alert('你点我干嘛');">点我一下</button>
+<!-- 点完文字之后不跳转超链接而是跳出弹框 -->
+    <a href="javaScript:alert('别点我');">你也点我一下</a>
+    <!-- 点完文字之后没有任何反应 -->
+    <a href="javascript:;">你点吧</a>
+
+    <!-- JS严格区分大小写 -->
+    <!-- JS中每一条语句以分号结尾  如果不写分号 浏览器自己添加 但是会消耗一些系统资源-
+            而且有些时候浏览器会加错分号  所以在开发中分号必须写
+            JS中会忽略多个空格和换行   可以利用空格和换行对代码进行格式化
+            字面量 ：1 2 3 4 5  （不可变的  都可以直接使用的  但是一般不直接使用
+            变量 ：变量可以用来保存字面量   变量的值可以任意改变  更加方便使用）-->
+        
+
+      
+        
+        
+
+</body>
+</html>

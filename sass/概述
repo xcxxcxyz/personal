@@ -1,0 +1,8 @@
+sass是css扩展语言 是采用ruby语言编写的一款CSS预处理语言
+Sass = SCSS
+sass编译成css 
+文件编译：
+sass<要编译的Sass文件路径>/style.scss：<要输出cSS文件路径>/style.css
+//  单行注释
+/* */ 多行注释
+/*！ */ 强制注释   

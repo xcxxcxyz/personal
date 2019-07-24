@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call()改变this指向
+        //第一个参数是所要重新定向到的对象 从第二个参数开始有多个参数 用来代表函数的实参
+        foo.call(obj)
+        //apply（）
+        //apply两个参数 第一个参数是要重定向到的对象  第二个对象是一个数组里的实参
+        foo.apply(obj)
+        //bind
+        //不会立即执行， 调用bind的时候只是绑定this 
+        var foo2 = foo.bind(obj,"abc","123")
+        foo2()
+        </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #pic{
+        background-color:black;
+    }
+    </style>
+</head>
+<body>
+    <!-- canvas的长度宽度不要在style里设置 最好在canvas标签内设置 -->
+    <canvas id="pic" width="500px" height="300px"></canvas>
+    <script>
+    var pic = document.getElementById("pic");
+    var context =pic.getContext("2d");
+    pic.ontouchstart= function(e){
+        // 获取当前鼠标点击的坐标
+        var thisX = e.changedTouches[0].clientX;
+        var thisY = e.changedTouches[0].clientY;
+        context.beginPath();
+        context.moveTo(thisX,thisY);
+        context.lineWidth = 3;
+        context.strokeStyle = "white";
+}
+    pic.ontouchmove = function(e){
+        var thisX = e.changedTouches[0].clientX;
+        var thisY = e.changedTouches[0].clientY;
+        context.lineTo(thisX,thisY);
+        context.stroke();
+    }
+    </script>
+</body>
+</html>

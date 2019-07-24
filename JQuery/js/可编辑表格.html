@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+    .outer{
+        margin: 0 auto;
+    }
+    #color{
+        background-color: gainsboro
+    }
+    </style>
+<script src="./jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<table width="800"border="1" cellspacing="0" class="outer">
+<tr>
+    <th>鼠标点击表格就可以编辑</th>
+</tr>
+<tr id="color">
+    <th width ="400">学号</th>
+    <th width ="400">姓名</th>
+</tr>
+<tr>
+    <td>1</td>
+    <td  class="inner">张三</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td  class="inner">李四</td>
+</tr>
+<tr>
+        <td>3</td>
+        <td  class="inner">王五</td>
+    </tr>
+<tr>
+        <td>4</td>
+        <td  class="inner">赵六</td>
+    </tr>
+</table>
+<div id="other"></div>
+<script>
+$(".inner").on("click",function(){
+    if($(this).children().length=0){
+    var thisVal=$(this).text()
+    var newInp = $("<input type = 'text'>");
+    new th-isInp.val (thisVal);
+    $(this).text("")
+    $(this).append(newInp);
+    thisIput.focus();
+    }
+})
+$(".inner").focusout(function(){
+var inpVal =$(this).find("input").val();
+$(this).empty();
+$(this).text(inpVal);
+})
+$("inner").on("keydown",function(e){
+    if(e.which ==13){
+        $(this).trigger("focusout");
+    }
+})
+
+</script>
+</body>
+</html>

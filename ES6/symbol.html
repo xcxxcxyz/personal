@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Symbol表示独一无二的单独设定的一个变量
+    let name=Symbol()
+    // name="wwww"
+    let obj ={
+        name:"xxx",
+        age:12,
+        // [name]:"cccc"
+    }
+    // console.log(obj[name]);
+
+    //该属性不会出现在for..in for...of中
+    for(let item in obj){
+        console.log(item);
+    }
+    
+    
+    </script>
+</body>
+</html>

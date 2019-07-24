@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--device-width适配移动端各种型号的手机宽度⬆️   scale 缩放扩大一倍  移动端必写  -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+/* div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+} */
+/* 当宽度为1024时  变成蓝色 */
+/* and not only */
+/* @media(max-width:1024px) and (min-width:960px){
+    div{
+        background-color: blue;
+    }
+} */
+/* @media(min-width:1025px){
+    div{
+        background-color: green;
+    }
+} */
+/* 横屏竖屏 */
+/* @media(orientation:landscape){
+    div{
+        background-color: red;
+    }
+}
+@media(orientation:portrait){
+    div{
+        background-color:blueviolet;
+    }
+} */
+@media(webkit-device-pixel-ratio:2){
+    div{
+        background-color:blue;
+    }
+}
+@media(webkit-device-pixel-ratio:3){
+    div{
+        background-color:blue;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="div">
+
+    </div>
+</body>
+</html>

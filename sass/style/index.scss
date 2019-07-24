@@ -1,0 +1,101 @@
+$nav-color:#090;
+$width:200px;
+nav{
+    // $width:100px;
+    width:$width;
+    color: $nav-color;
+}
+$high-color:#ff00ff;
+ high{
+    border: 2px solid $high-color;
+}
+#container{
+    article{
+        h1{
+            color: #333;
+        }
+        p{
+            margin-bottom: 1.4em
+        }
+    }
+    head{
+        color: #090;
+    }
+}
+article a{
+    color: #ff00ff;
+    &:hover  {color: #ff0032}
+}
+#P aside{
+    color: #ff0032;
+    body.ie &{color: #ff00ff}
+}
+.container{
+    h1,h2,h3{color: #ff00ff}
+}
+
+nav,aside{
+    a{color: #ff00ff};
+}
+header + p { font-size: 1.1em }
+article {
+    ~ article { border-top: 1px dashed #ccc }
+    > section { background: #eee }
+    dl > {
+      dt { color: #333 }
+      dd { color: #555 }
+    }
+    nav + & { margin-top: 0 }
+  }
+  nav{
+      border{
+        style:solid;
+        color: #333;
+        width: 1px;
+      }
+    }
+  nav{
+    border: solid #090 1px {
+        left: 0px;
+        right: 0px;
+    } 
+  }
+
+  $aurl:'xx.jpg';
+  #d{
+      background-image: url('css/'+$aurl);
+  }
+#div11{
+    color:darken($color: red, $amount: 20%);
+    background-color:opacify($color: rgba(0,0,0,0.2), $amount: 0.4)
+}
+#div12{
+    border: 1px solid black;
+}
+$m1:(
+    color:red,
+    font-size:12px
+);
+#div13{
+    color: map-get($m1,color)
+};
+$arr: a b c d;
+@each $var in $arr {
+    #span-#{$var}{
+        color: #ff0032;
+    }
+}
+@function foo($key){
+    @if ($key==0) {
+        @return red;
+    }
+    @else if($key ==2){
+        @return blue;
+    }
+    @else{
+        @return green;
+    }
+}
+#div23{
+    color: foo(1)
+}

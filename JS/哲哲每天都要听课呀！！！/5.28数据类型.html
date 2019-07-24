@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+//    数据类型指的是字面量的类型
+    // JS中有六种数据类型：
+    // String ：字符串      Number ：数值    Boolean：布尔值   Null：空值   Undefined：未定义  Object：对象
+    // 前五种属于基本数据类型   Object属于引用数据类型
+    
+    
+// String字符串   需要用引号引起来
+        var Str="123";
+        console.log(Str);
+        // 输出字面量  字符串Str  
+        alert("Str");
+        // 输出变量Str
+        alert(Str);
+ 
+        var Str2="123";
+               Str2="456";
+
+//    ------------------------------------------------------------------------------------- 
+//    ------------------------------------------------------------------------------------- 
+
+// Number   
+        // 在JS中所有的数值都是Number类型  包括整数和浮点数（小数）
+        // 数字123   
+        var a = 123;
+        // 字符串123
+        var b = "123"
+        // typeof检查变量类型       typeof 变量
+        console.log(typeof a);
+        //  JS中可以表示数值的最大值  
+        console.log(Number.MAX_VALUE);
+        // 如果使用Number表示的数字超过了最大值  返回infinity（无穷）
+        a = Number.MAX_VALUE * Number.MAX_VALUE;    
+        // （最大数*最大数=最大数的平方）
+        console.log(a);
+        // 使用typeof检查Infinity也会返回Number
+        // NaN是一个特殊的数字  表示not a number（不是一个数字）
+        a= "abc"*"bcd";
+        // 使用typeof检查NaN也会返回Number
+        // 如果使用JS计算浮点数  可能会得到一个不精确的结果   千万不能使用JS进行对精确度比较高的运算
+
+        // ------------------------------------------------------------------------------------- 
+       //    ------------------------------------------------------------------------------------- 
+    
+        // Boolean布尔值  只有两个 “ture”“false”  主要做逻辑判断
+        var bool=true;
+        console.log(bool);
+        console.log(typeof bool);
+        // 使用typeof检查布尔值时  会返回Boolean
+
+        // /    ------------------------------------------------------------------------------------- 
+        // /    ------------------------------------------------------------------------------------- 
+
+        // Null  Undefined
+        // Null类型的值只有一个Null   经常表示一个空的对象
+        var a = null ;
+        console.log(a);
+        // 用typeof检查Null值时 返回Object（对象）
+
+        // Undefined的类型的值只有一个Undefined   当声明一个变量但是不给变量赋值时  返回Undefined
+        // 表示未定义
+        var b;
+        var b=undefined;
+        // 用typeof检查Undefined值时 返回Undefined
+
+
+
+    
+    
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

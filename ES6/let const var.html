@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+    // var a =10;
+    // let b = 20;
+    // const c = 30;
+    // console.log(a,b,c);
+    
+    
+    // a =10;
+
+    //变量提升
+    // var a;
+    // console.log(a);
+    // var a =10;
+
+    //作用域链
+    // var a =10;
+    // function foo(){
+    //     console.log(a);
+    //     var a =20;
+    // }
+    // foo();
+// let 特性
+    // 1.暂时性死区
+    // let a =10;
+    // 2.不存在变量提升提升
+    // 3.不允许重复定义
+    // let a =10;
+    // let a =20;
+    // console.log(a)
+    // 4.块级作用域  只要有花括号的内部的 let认为是局部变量
+    // for(var i =0;i<10;i++){
+    //     let b =10;
+    // }
+    // console.log(b);  //b is not defined
+    // 5.可以当作闭包
+    // var aLi = document.getElementsByTagName("li")[0];
+    // for(let i=0;i<10;i++){
+    //     aLi[i].onclick= function(){
+    //         console.log(i)
+    //     }
+    // }
+
+    // const  只读 不能修改 定义常量  不能修改的是指向的堆内存
+    </script>
+</body>
+</html>

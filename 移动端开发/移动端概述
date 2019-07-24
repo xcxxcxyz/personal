@@ -1,0 +1,6 @@
+nativeap（原生）  需要安装的移动端app  分为安卓/ios 
+                   页面 存放于本地 语言Object C（ios）/ Java（ios）
+webapp （web） 移动端打开的网页 
+                    存放于服务器  语言：html
+hybridapp  混合   （主要）
+                    语言：Object C（ios） +html

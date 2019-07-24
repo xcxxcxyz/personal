@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.outer{
+    font-size: 100px;
+}
+#one{
+    width: 1440px;
+    height: 830px;
+    background-color: aquamarine;
+}
+#two{
+    width: 1440px;
+    height: 830px;
+    background-color: yellowgreen;
+}
+#three{
+    width: 1440px;
+    height: 830px;
+    background-color: blueviolet;
+}
+.top{
+    float: left;
+}
+    </style>
+</head>
+<body>
+<div class="top">
+    <button class="btn" id="first">第一页</button>
+    <button class="btn" id="second">第二页</button>
+    <button class="btn" id="third">第三页</button>
+</div>
+<div class="outer">
+        <div class="in" id="one">1</div>
+        <div class="in" id="two">2</div>
+        <div class="in" id="three">3</div>
+</div>
+<script>
+$(".btn").click(function(){
+    $("html,body").animate({
+        scrollTop:$($(this).attr("href")).offset().top
+    },1000)
+})
+
+
+</script>
+</body>
+</html>

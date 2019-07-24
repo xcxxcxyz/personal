@@ -1,0 +1,111 @@
+nav {
+  width: 200px;
+  color: #090;
+}
+
+high {
+  border: 2px solid #ff00ff;
+}
+
+#container article h1 {
+  color: #333;
+}
+#container article p {
+  margin-bottom: 1.4em;
+}
+#container head {
+  color: #090;
+}
+
+article a {
+  color: #ff00ff;
+}
+article a:hover {
+  color: #ff0032;
+}
+
+#P aside {
+  color: #ff0032;
+}
+body.ie #P aside {
+  color: #ff00ff;
+}
+
+.container h1, .container h2, .container h3 {
+  color: #ff00ff;
+}
+
+nav a, aside a {
+  color: #ff00ff;
+}
+
+header + p {
+  font-size: 1.1em;
+}
+
+article ~ article {
+  border-top: 1px dashed #ccc;
+}
+article > section {
+  background: #eee;
+}
+article dl > dt {
+  color: #333;
+}
+article dl > dd {
+  color: #555;
+}
+nav + article {
+  margin-top: 0;
+}
+
+nav border {
+  style: solid;
+  color: #333;
+  width: 1px;
+}
+
+nav {
+  border: solid #090 1px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#d {
+  background-image: url("css/xx.jpg");
+}
+
+#div11 {
+  color: #990000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#div12 {
+  border: 1px solid black;
+}
+
+#div13 {
+  color: red;
+}
+
+#span-a {
+  color: #ff0032;
+}
+
+#span-b {
+  color: #ff0032;
+}
+
+#span-c {
+  color: #ff0032;
+}
+
+#span-d {
+  color: #ff0032;
+}
+
+#div23 {
+  color: green;
+}
+
+/*# sourceMappingURL=index.css.map */

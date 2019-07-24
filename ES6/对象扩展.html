@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // var name ="aa"
+    // var obj ={
+    //     name:name //变量 容易弄混
+    // }
+    // console.log(obj);
+    
+    //上等于下
+
+    // var name ="aa"
+    // var obj ={
+    //     name
+    // }
+    // console.log(obj);
+    
+    //属性值引入变量
+    // var str ="school"
+    // var obj2 ={
+    //     [str]:"aaa"
+    // }
+    // console.log(obj2);
+
+    // var obj ={
+    //     name:"xxx",
+    //     age:12,
+    //     sex:"nan"
+    // }
+    // function foo(para){
+    //     return obj[para]
+    // }
+    // console.log(foo("name"));
+
+// var name ="xxx"
+//     var obj ={
+//         name,
+//         showName(){
+//             console.log(this.name);            
+//         }
+//     }
+//     obj.showName();
+    
+
+ //2.object is()  判断两个值是否严格相等  ===
+//  console.log(Object.is(1,"1"));
+
+// let obj ={
+//     name:1,
+// }
+// let obj2 ={
+//     name:1,
+// }
+//  console.log(Object.is(obj,obj2));
+
+// console.log(Object.is(NaN,NaN));  //ture
+// console.log(NaN==NaN);      //false
+
+// console.log(0===-0);
+// console.log(Object.is(0,0));
+
+
+//3.Object.assign()   对象合并
+// let obj ={
+//     name:"xxx",
+// }
+// let obj2 ={
+//     age:20
+// }
+// Object.assign(obj.obj2);
+// console.log(obj);
+
+//4.判断是否有该属性
+// let obj ={
+//     name:"0"
+// }
+// console.log(obj.hasOwnProperty("name"));  //不能判断原型的属性 只能判断构造函数里的属性
+
+// if("name" in obj){
+//     console.log("有该属性");
+// }
+
+//对数组也可以操作
+// var arr =[1,2,3,4,5,6];
+// console.log(1 in arr);
+
+//5.删除
+// let obj ={
+//     name:"xaa",
+//     age:12,
+//     school:"2xs"
+//     }
+//     delete obj.school;
+//     console.log(obj);
+    
+
+    </script>
+</body>
+</html>

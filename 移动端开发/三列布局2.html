@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+   margin:0 200px;
+   position: relative;
+}
+.center,.left,.right{
+    height: 200px;
+}
+.center{
+ 
+    background-color: red;
+}
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -200px;
+    width: 200px;
+    background-color:blue;
+}
+.right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: -200px;
+    width: 200px;
+    background-color: green;
+}
+</style>
+</head>
+<body>
+    <!-- bfc 块级格式化上下文 -->
+    <!-- 1.浮动 -->
+    <!-- 2.定位 -->
+    <!-- 3.行内块inline-blocks -->
+<div class="main">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+</div>
+</body>
+</html>

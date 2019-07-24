@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //AJAX
+
+
+        // 第一步 创建 XMLHttpRequest 对象
+        // var xmlhttp;
+        // if (window.XMLHttpRequest)
+        //   {// code for IE7+, Firefox, Chrome, Opera, Safari
+        //   xmlhttp=new XMLHttpRequest();
+        //   }
+        // else
+        //   {// code for IE6, IE5
+        //   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        //   }
+        //   //第二步 向服务器发送请求
+        //   xmlhttp.open("GET","http://127.9.9./login/",true);
+        //   xmlhttp.send();
+          //第三步  响应
+        //   xmlhttp.onreadystatechange=function()
+        //     {
+        //     if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        //         {
+        //         document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+        //         }
+        //     }
+            /*
+                存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+
+                0: 请求未初始化
+                1: 服务器连接已建立
+                2: 请求已接收
+                3: 请求处理中
+                4: 请求已完成，且响应已就绪
+            */
+
+
+            //promise  是异步编程的一种解决方案
+                //三种状态  进行中 已成功 已失败
+            // new Promise(function(resolve,reject){
+            //     $.get("a.json",function(res){
+            //         console.log(res);
+            //         resolve();
+            //         // reject();  
+            // })
+            // }).then(function(){
+            //         console.log(("成功"));
+                    
+            // }).catch(function(){
+            //     console.log("失败");
+                
+            // })
+
+
+            //generator  是ES6提供的另一个解决异步编程的方案
+            function* helloGenerator(){
+                yield 'hello';
+                yield 'world';
+                yield 'ending';
+            }
+            var hw =helloGenerator();
+            console.log(hw.next());
+            
+    </script>
+</body>
+</html>

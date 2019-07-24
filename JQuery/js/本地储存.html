@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //localStorage 5M
+        //设置值  给属性 
+    localStorage.fellow ='32'
+    localStorage.setItem("name","123")
+    //设置值  给对象
+    console.log(localStorage.getItem("name"));
+    //获取值
+    console.log(localStorage.fellow)
+    //删除值
+    localStorage.removeItem("name")
+    //清空值
+    localStorage.clear();
+//session属于会话 当网页结束就消失了  生命周期和localStorage不一样
+    sessionStorage.fellow =32;
+    </script>
+</body>
+</html>

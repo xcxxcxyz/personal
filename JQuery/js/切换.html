@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+   #outer{
+       width: 500px;
+       height: 200px;
+       border: 1px solid black;
+       margin: 0 auto;
+       margin-top: 200px;
+   }
+   #inner-top{
+       width: 500px;
+       height: 20px;
+       border-bottom: 25px solid black;
+       background-color: black
+   }
+   #inner-top li{
+       float: left;
+       list-style: none;
+       padding-right: 20px;
+       border-right: 2px solid white;
+       font-size: 30px;
+       color: white;
+       text-align: center;
+   }
+   #btn01{
+       background-color: blue;
+   }
+   #inner-01{
+       display: none;
+   }
+   #inner-02{
+       display: none;
+   }
+   #inner-03{
+       display: none;
+   }
+   .inner-bottom li{
+    list-style: none;
+    font-size: 20px;
+   }
+    </style>
+    <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner-top">
+            <ul>
+                <li id="btn01">第一节课</li>
+                <li id="btn02">第二节课</li>
+                <li id="btn03">第三节课</li>
+            </ul>
+        </div>
+        <div  class="inner-bottom">
+            <ul id="inner-01">
+                <li>第一节课内容</li>
+                <li>第一节课内容</li>
+                <li>第一节课内容</li>
+            </ul>
+            <ul id="inner-02">
+                    <li>第二节课内容</li>
+                    <li>第二节课内容</li>
+                    <li>第二节课内容</li>
+                </ul>
+                <ul id="inner-03">
+                    <li>第三节课内容</li>
+                    <li>第三节课内容</li>
+                    <li>第三节课内容</li>
+                </ul>
+        </div>.
+    </div>
+    <script>
+        $("inner-top li").on("mouseover",function(){
+            console.log
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+            $("")
+        // $("btn02").click(function(){
+        //     $("inner-02").replaceAll("inner-01","inner-03");
+        // })
+        // $("btn03").click(function(){
+        //     $("inner-03").replaceAll("inner-01","inner-02");
+        // })
+    </script>
+</body>
+</html>

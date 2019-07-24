@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-size: 100px;
+    }
+    div{
+        width: 100%;
+        height: 200px;
+        background-color: aquamarine;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+</body>
+<script>
+//     var num =0;
+// function foo(){
+// $("#one").text(num++);
+// }
+// $("#one").on("mousemove",foo)
+
+// var num2 = 0;
+// function foo2(){
+//     $("#two").text(num++);
+// }
+// function debounce(fun,wait){
+//     var timer =null;
+//     return function(){
+//     if(timer){
+//     clearTimeout(timer)
+//     }
+//     timer = setTimeout(function(){
+//         fun()
+//     },wait)
+//     }
+// }
+// $("#two").on("mousemove",debounce(foo2,1000))
+
+
+//函数节流
+var num3=0;
+function foo3(){
+    $("#three").text(num3++);
+}
+function throttle(fun,wait){
+    var timer =null;
+    return function(){
+      if(!timer) {
+      timer = setTimeout(function(){
+            fun();
+            timer =null;
+        },wait)
+        }
+    }
+}
+$("#three").on("mousemove",throttle(foo3,1000))
+   
+
+</script>
+</html>
