@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let str="hello world"
+    //判断hello 是否在字符串str中
+    // 1.console.log(str.indexOf("hello")); //indexOf 第一次出现的位置
+    // 1.console.log(str.includes("hello"));  //返回true
+    //  let reg = /hello/;
+    //3. console.log(reg.test(str));
+    //4.console.log(reg.exec(str));
+    //5. let reg2 =new RegExp("hello");
+    // console.log(reg2.test(str));
+    // console.log(reg2.exec(str));
+
+    // let reg=/c{1}/;  //{}表示c出现的次数 匹配了一个c
+    // let str ="cainiao"
+    // console.log(reg.exec(str));
+    
+    // let reg =/c{1,2}/  //一个c 或者是两个c  与多的进行匹配
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+        
+    // let reg =/c{1,}/  //一个或者是更多的c
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    //c* 和 {0,}   是一个意思 表示0个或者更多
+    //c+ 和{1，}是一个意思  表示1个或者更多
+    //c？ 和{0,1} 是一个意思  表示0次或1次
+
+    // let reg =/c{1,}?/  // {}后面加？ 相当于往少了匹配
+    // let str ="1ccccacciniaccoccc"
+    // console.log(reg.exec(str));
+
+    //  let reg =/^c/  //是否以c开头
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/c$/  //是不是以c结尾
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/^c$/  //开头结尾都为c  表示整个字符串就是c
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/c{1,2}/  //一个c 或者是两个c  与多的进行匹配
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/./  //除了换行符\n其他都能匹配的上
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/a|c/  // | 或运算  a或c
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/^[abc]/  //[abc] 字符集合  表示a或者b或者c
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/[a-zA-Z]/  // 匹配所有的大小写
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/^[a-zA-Z][a-zA-Z0-9]+/  //必须两者全部成功
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/[^abc]/  //^在【】中取反  即不是a不是b不是c
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // let reg =/\.bc/  //\b表示的边界的意思，也就是说，字符串和空格的开头和结尾才算数。
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // reg = /\s.+/;
+    // // \f匹配换页符，\n匹配换行符，\r匹配回车，\t匹配制表符，\v匹配垂直制表符。 \s匹配单个空格，等同于[\f\n\r\t\v]。
+    // str='This is a test String.';
+    // execReg(reg,str);
+    
+    // reg = /\w+/; //\w表示单词字符，等同于字符集合[a-zA-Z0-9_]。
+    // str='blueidea';
+    // execReg(reg,str);
+
+    //  reg = /\w/;     //反向引用   形式如下:/(子正则表达式)\1/
+    //  str='blueidea';
+    //  str='blueidea';
+    //  execReg(reg,str);
+
+    //  reg = /(\w)(\w)\2\1/;     //反向引用   形式如下:/(子正则表达式)\1/  数字表示索引的意思
+    //  str='blueidea';
+    //  str='blueidea';
+    //  console.log(reg.exec(str));
+
+    //   reg = /\w/;     //反向引用   形式如下:/(子正则表达式)\1/
+    //   str='blueidea';
+    //   str='blueidea';
+    //   execReg(reg,str);
+    
+    //   reg = /\w(?:\w)/;     //?: 不计入正则表达式的匹配结果 
+    //   str='blueidea';
+    //   str='blueidea';
+    //   execReg(reg,str);
+
+    //   reg = /blue(?=4)/;     //正向预查 要匹配的字符串，后面必须紧跟着pattern
+    //   str='blueidea';
+    //   str='blueidea';
+    //   execReg(reg,str);
+
+     //   reg = /blue(?!4)/;     //反向预查 要匹配的字符串，后面不能有pattern
+    //   str='blueidea';
+    //   str='blueidea';
+    //   execReg(reg,str);
+ </script>
+</body>
+</html>
