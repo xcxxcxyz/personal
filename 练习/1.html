@@ -8,7 +8,51 @@
 </head>
 <body>
     <script>
-        alert(undefined==null)
-        </script>
+    // let str ="30CAC0040"
+    // let str2 ="3SFASDF92"
+    // let reg = /\d{2,}$/;
+    // console.log(reg.exec(str));
+    // console.log(reg.exec(str2));
+
+    // let str = "蓝 色  理    想 "
+    // let reg =/\s+/g;
+    // let a =str.replace(reg,"")
+    // console.log(a);
+    
+    // let str = "1213124321"
+    // let reg =/^\d+$/;
+    // console.log(reg.test(str));
+    
+    //区号必填为3-4位的数字，区号之后用“-”与电话号码连接 例：<span>0451</span>-12345678-1234
+    // let str = "0412-1234567-1234";
+    // let reg = /(\d{3,4})-(\d{7,8})-([0-9]{0,})/;
+    // console.log(reg.test(str));
+    
+        // 正则验证手机号，忽略前面的0，支持130-139，150-159。忽略前面0之后判断它是11位的。
+        // let str ="01223911111111"
+        // let reg =/0{0,}(13\d|15\d)\d{8}$/
+        // console.log(reg.test(str));
+
+        // 正则验证用户名，包含数字、字母、下划线11位。
+        // let str ="Acxxxxyz_21"
+        // let  reg =/^\w{11}$/
+        // console.log(reg.exec(str));
+
+    //     日期正则表达式</h3>
+    // <p>yyyy-mm-dd格式</p>
+    // let str ="2019-02-02"
+    // let reg =/^\d{4}-\d{2}-\d{2}$/
+    // console.log(reg.exec(str));
+    
+    // <h3>日期正则表达式</h3>
+    //   <p>2018-15-08</p>
+    //   <p>2018年08月15日</p>
+    // let str ="2019-17-02"
+    // let reg =/(?<year>\d{4})-(?<date>\d{2})-(?<month>\d{2})/
+    //     let a =str.replace(reg,"$1年$3月$2日")
+    // console.log(a);
+
+
+    </script>
 </body>
 </html>

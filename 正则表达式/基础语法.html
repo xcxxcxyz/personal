@@ -121,6 +121,41 @@
     //   str='blueidea';
     //   str='blueidea';
     //   execReg(reg,str);
+
+    //匹配元字符   \转译
+    // let reg =/\？/ 
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // i 忽略大小写
+    // let reg =/A/i ;
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+    // m 修改^和$在正则表达式中的作用，让他们分别表示行首和行尾
+    // let reg =/^b/m 
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+     
+    // g 全局匹配
+    // let reg =/a/g
+    // let str ="cccainiao"
+    // console.log(reg.exec(str));
+
+// let str ="aaaavsadsa"
+// let reg =/a/g
+// let a =str.replace(reg,"-")   //replace 用-将str里的所有a替换
+// console.log(a);
+
+// let str="hello world";
+// let reg =/(?<a>hello)(?<b>world)/;
+// // console.log(reg.exec(str));
+// let a =str.replace(reg,"$b $a");
+// console.log(a);
+
+//座机号正则
+var reg =/^\d{3,4}-\d{7,8}-$/
+
  </script>
 </body>
 </html>
