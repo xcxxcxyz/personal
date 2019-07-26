@@ -9,18 +9,27 @@
 </head>
 <body>
     <div id="app">
-        <!-- 默认v-text没有闪烁问题 -->
-        <!-- v-text v-html会覆盖元素中原本有的内容 -->
-        <h1 v-text="str"></h1>
-        <!-- 避免使用html标签 -->
-        <div v-html ="str1"></div>  
+        <div @click="addEvent">{{num }}</div>  
+        <br/>
+        {{res}}
     </div>
     <script>
         new Vue ({
             el:"#app",
             data:{
-                str:"hello world!!!!!",
-                str1:"<h1>helloschool</h1>"
+               num:0
+            },
+            methods:{
+                addEvent(){
+                    this.num++
+                }
+            },
+            // 计算属性
+            computed:{
+                res(){
+                    let thisnum=this.num*10
+                    return thisnum;
+                }
             }
         })
     </script>

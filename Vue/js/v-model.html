@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"> </script>
+    <style> 
+    [v-cloak]{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--v-model  双向绑定 -->
+        <!-- v-model.lazy 相当于绑定了blur 失去焦点事件 -->
+        <input type="text" placeholder="请输入用户名1" v-model.lazy="str">
+        <!--v-model.number  能转换为数值型的就转换数值型 转换不了的就转换为字符型 -->
+        <input type="text" placeholder="请输入用户名2" v-model.number="str">
+        用户名：{{str}}
+        <br/>
+        <input type="checkbox"  v-model="hobbyarr" name="hobby" value="篮球">篮球
+        <input type="checkbox"  v-model="hobbyarr" name="hobby" value="足球">足球
+        <input type="checkbox"  v-model="hobbyarr" name="hobby" value="羽毛球">羽毛球
+        <input type="checkbox"  v-model.trim="hobbyarr" name="hobby" value="排球">排球
+        我的爱好：{{hobbyarr}}
+        <input type="radio" v-model="sex" name="sex" value="男">男
+        <input type="radio"  v-model="sex" name="sex" value="女">女
+        性别：{{sex}}
+        <br/>
+        <select v-model="school" name="" id="">
+            <option value="黑大">黑大</option>
+            <option value="理工">理工</option>
+            <option value="农大">农大</option>
+        </select>   
+         我的学校：{{school}}
+    </div>
+    <script>
+        new Vue ({
+            el:"#app",
+            data:{
+                str:"fellow",
+                hobbyarr:[],
+                sex:"男",
+                school:"黑大",
+            }
+        })
+
+    </script>
+</body>
+</html>
