@@ -1,0 +1,7 @@
+MVC 传统数据交互模式
+1.视图 view ：用户界面
+2.控制器 controller ：业务逻辑
+3.模型 model：数据保存
+顺序  V-C-M-C-V
+
+MVVM 新创数据交互模式
