@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+    <button v-on:click="foo">浪起来</button>
+    <button v-on:click="foo2">低调</button>
+    <h2 >{{ str }}</h2>
+    </div>
+    <script>
+    new Vue ({
+        el:"#app",
+        data:{
+            str:"猥琐发育别浪！！我们能赢！！！！！",
+            intervalid:null,
+        },
+        methods:{
+            foo(){ 
+             this.intervalid=setInterval(() => {  //=>箭头函数解决this指向问题                     
+            // 获取到头的第一个字符
+              let start = this.str.substring(0,1);
+            //   获取到后面的字符
+              let end =this.str.substring(1,);
+            //   字符重新拼接
+              this.str=end +start;
+            },400)
+            },
+            foo2(){
+                clearInterval(this.intervalid)
+            }
+        }
+    })
+    </script>
+</body>
+</html>

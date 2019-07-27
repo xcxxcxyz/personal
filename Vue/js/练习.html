@@ -9,21 +9,30 @@
 </head>
 <body>
     <div id="app">
-        <!-- <div v-show="isShow">{{mes}}</div> -->
-        <div v-if="isCaxx==0">a</div>
-        <div v-else-if="isCaxx==1">b</div>
-        <div v-else="">c</div>
+        <button v-on:click="foo">浪起来</button>
+        <button v-on:click="foo2">低调</button>
+        <h3>{{str}}</h3>
     </div>
     <script>
-    let a =new Vue({
-        el:"#app",
-        data:{
-            mes:"helloworld",
-            isShow:true,
-            isCaxx:"aaa",
-        }
-    })
-    
+        new Vue({
+            el:"#app",
+            data:{
+                str:"我是小徐小徐小徐可爱的小徐聪明的小徐善良的小徐",
+                foo3:null,
+            },
+            methods:{
+                foo(){
+                    this. foo3=setInterval(()=>{
+                    let start = this.str.substring(0,1)
+                    let end =this.str.substring(1,)
+                    this.str=end+start;
+                    },100)
+                },
+                foo2(){
+                    clearInterval(this.foo3);
+                }
+            }
+        })
     </script>
 </body>
 </html>
