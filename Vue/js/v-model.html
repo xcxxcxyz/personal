@@ -14,7 +14,8 @@
 </head>
 <body>
     <div id="app">
-        <!--v-model  双向绑定 -->
+        <!--v-model  可以实现表单元素和model中数据的双向数据绑定  v-model只能运用在表单元素中
+        input  select  checkbox  textarea -->
         <!-- v-model.lazy 相当于绑定了blur 失去焦点事件 -->
         <input type="text" placeholder="请输入用户名1" v-model.lazy="str">
         <!--v-model.number  能转换为数值型的就转换数值型 转换不了的就转换为字符型 -->

@@ -16,6 +16,7 @@
     <div id="app">
         <div v-html ="str1"></div>  
         <!-- v-bind 是用来提供绑定属性的指令 -->
+        <!-- 只能实现数据的单向绑定 从m绑定到v -->
         <!-- <input type="button"  value = "按钮"  v-bind:title="mytitle+'1111'"> -->
         <!-- 可以将v-bind省略 -->
         <input type="button"  value = "按钮"  :title="mytitle+'1111'">
