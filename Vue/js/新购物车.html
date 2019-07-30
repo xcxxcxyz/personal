@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist 2/css/bootstrap.css">
+    <script src="./vue.js"></script>
+    <style>
+    .form-inline{
+        margin:70px;
+    }
+    .table{
+        width: 500px;
+        margin-left:100px;
+    }
+    </style>
+</head>
+<body>
+<div id="app">
+<form class="form-inline">
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputEmail3" placeholder="商品名称" v-model="goodName">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="exampleInputPassword3" placeholder="商品价格" v-model="goodPrice">
+        </div>
+        <button type="button" class="btn btn-default" v-on:click="add">添加</button>
+        <input type="text" class="form-control" id="exampleInputEmail3" placeholder="搜索"  v-model="find">
+        <button type="button" class="btn btn-default" v-on:click="search">搜索</button>
+        <!-- <button @click.prevent="checkdel">删除选中</button> -->
+</form>
+<table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item,index) in dataList">
+            <th scope="row"><input type="checkbox"></th>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td><button @click.prevent="delsingle(item.id)">删除</button>       
+            </td>
+          </tr> 
+        </tbody>
+</table>
+</div>
+<script>
+new Vue({
+    el:"#app",
+    data:{
+        find:"",
+        goodName:"",
+        goodPrice:"",
+        dataList:[
+            { 
+                id:1,
+                name:"衣服",
+                price:123, 
+            },
+            {
+                id:2,
+                name:"裤子",
+                price:456
+            },
+            {
+                id:3,
+                name:"鞋子",
+                price:78
+            },
+            {
+                id:4,
+                name:"帽子",
+                price:10
+            },
+    ]
+},
+    methods:{
+        delsingle(id){
+            //根据id删除数据
+            //1.如何根据id找到要删除数据的索引
+            // 找到索引直接调用splice方法
+            this.dataList.some((item,i)=>{
+                if(item.id==id){
+                    this.dataList.splice(i,1)
+                    return true;
+                }
+            })
+        },
+        search(){
+        let thisText = this.find;
+        let newarr=this.dataList.filter(function(item,index,arr){
+        if(item.name.includes(thisText)){
+            return item;
+        }
+        })
+            this.dataList=newarr;
+        },
+        add(){
+             let obj={
+                 name:this.goodName,
+                 price:this.goodPrice
+             }
+            this.dataList.push(obj);
+        }
+    }
+})
+</script>
+</body>
+</html>

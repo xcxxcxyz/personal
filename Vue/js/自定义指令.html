@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+    #div1{
+        height: 110px;
+        width: 110px;
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="div1"></div>
+    </div>
+    <script>
+        Vue.directive("text",function(el,binding,vnode){
+            console.log(el,binding,vnode);
+            el.style.backgroudColor=binding.value
+        })
+        Vue.directive("test",{
+            bind(){
+                console.log("inserted");
+            },
+            inserted(){
+                console.log("inserted");
+            }
+        })
+    new Vue({
+        el:"#app",
+        data:{
+
+        }
+    })
+    </script>
+</body>
+</html>
