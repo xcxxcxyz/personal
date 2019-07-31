@@ -11,27 +11,17 @@
 
 <body>
     <div id="app">
-        <!-- <weichuang :str="msg"></weichuang> -->
-        <wei :str="msg"></wei>
+    <mycom2></mycom2>
     </div>
-    template
     <script>
-        // Vue.component("weichuang",{
-        //     template:
-        //         `<h1>hello</h1>`,
-        //     props:"str"
-        // })  
+        Vue.component('mycom2',{
+            //不论哪种方式创建的组件 组件的template属性指向的模版内容 必须有且只有唯一的一个根元素
+            template:'<h1><h1/>'
+        })
         new Vue({
             el: "#app",
             data: {
-                msg: "hellwei"
             },
-            components: {
-                "wei": {
-                    template: `<h2> {{str}}</h2>`,
-                    props: ["str"],
-                }
-            }
         })
     </script>
 </body>
