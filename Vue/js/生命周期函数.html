@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" @click="msg='No'">
+        <h3 id="h3">{{msg}}</h3>
+    </div>
+    <script>
+   let vm =new Vue({
+       el:"#app",
+       data:{
+           msg:"ok"
+       },
+       methods: {
+           show(){
+               console.log("zzzzzzzz"); 
+           }
+       },
+       //我们遇到的第一个生命周期函数 表示实例完全被创建出来之前会执行他
+       beforeCreate() {
+        //在beforeCreate执行的时候 data和methods里的东西都没有被触发
+       },
+       //第二个生命周期函数
+       created() {
+           console.log(this.msg);
+           //在Create执行的时候 data和methods里的东西都已经初始化好了
+       },
+       //第三个生命周期函数
+       beforeMount() {
+        //    console.log(document.getElementById("h3").innerHTML);
+           //表示模版已经编译完成了 但是并没有渲染到页面中 页面中的元素还没有被真正的替换过来 只是一些之前写的模版字符串
+       },
+        //  第四个生命周期函数
+       mounted() {
+           //表示内存中的模版已经真实的挂载到页面中 用户可以看到渲染好的页面
+           //当执行完mounted 实例就已经完全创建好了 没有其他的操作 实例就在内存中不动了
+           //如果要操作dom节点 最好在mounted里操作
+           //组件运行的生命周期函数只有两个：beforeupdata 和 updata 这两个时间会根据data的改变 有选择性的触发0次到多次
+       },
+
+       beforeUpdate() {
+           //表示我们的界面还没有被更新 数据肯定被更新了
+        //    console.log(document.getElementById("h3").innerHTML);
+        //     console.log('数据：'+this.msg);
+            //执行时 页面中的数据是旧的  但是data中的数据是新的  未保持同步
+       },
+       updated() {
+        console.log(document.getElementById("h3").innerHTML);
+        console.log('数据：'+this.msg);
+        //执行时 data和页面中的数据保持同步
+       },
+   })
+    </script>
+</body>
+</html>
