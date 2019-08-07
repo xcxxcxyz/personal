@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/react.development.js"></script>
+    <script src="./js/react-dom.development.js"></script>
+    <script src="./js/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+     class Foo2 extends React.Component{
+        constructor(props){
+            super(props)
+        }
+        clickHandle(){
+            this.props.getsolider(this.props.name)
+        }
+        render(){
+            return(
+                <div>
+                <h1>将军{this.props.name}有{this.props.solider}个士兵</h1>
+                <button onClick={this.clickHandle.bind(this)}>调兵</button>    
+                </div>
+            )
+        }
+    }
+    class Foo extends React.Component{
+        constructor(props){
+            super(props)
+            this.state={
+                count:100,
+                soliderA:100,
+                soliderB:100,
+            }
+        }
+        changesolider(name){
+            let king=this.state.count
+            let soliderA=this.state.soliderA
+            let soliderB=this.state.soliderB
+            king-=10;
+            if (name=="a") {
+                soliderA+=10
+            }else{
+                soliderB+=10
+            }
+            this.setState({
+                count:king,
+                soliderA:soliderA,
+                soliderB:soliderB,
+            })
+        }
+        render(){
+            return(
+                <div>
+                <h1>国王有{this.state.count}个士兵</h1>
+                <Foo2 name={'a'} solider={this.state.soliderA} getsolider={this.changesolider.bind(this)}/>
+                <Foo2 name={'b'} solider={this.state.soliderB} getsolider={this.changesolider.bind(this)}/>    
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(
+        <Foo/>,
+        document.getElementById("root")
+    )
+    </script>
+</body>
+</html>

@@ -52,17 +52,18 @@ export default {
 </script>
 <style scoped>
 .movie #foot,.movie #nav{
-    background-color: rgb(33, 150, 243);
+    background-color: rgb(109, 125, 83);
 }
 .music #foot,.music #nav{
-    background-color: rgb(0, 150, 136);
+    background-color: rgb(224, 170, 0);
 }
 .book #foot,.book #nav{
-    background-color:  rgb(121, 85, 72);
+    background-color:  rgb(0, 186, 137);
 }
 .talk #foot,.talk #nav{
-    background-color: rgb(63, 81, 181);
+    background-color: rgb(223,179,215);
 }
+
 #nav{
     position:fixed;
     bottom: 0; 
@@ -88,18 +89,18 @@ export default {
     background-color: rgb(33, 150, 243);
     height: 1rem;
     text-align: center;
-    position: relative;
     color: aliceblue;
+    line-height: .6rem;
 }
 #foot p{
+    position: absolute;
+    margin-left: 10px;
     font-size: .3rem;
-    position:absolute;
     line-height: 1rem;
 }
 #foot span{
-    position: fixed;
-    margin-left: -25px;
     font-size: .5rem;
     line-height: 1rem;
+    
 }
 </style>

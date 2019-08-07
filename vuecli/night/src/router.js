@@ -20,7 +20,7 @@ export default new Router({
     {
       path: '/Book',
       name: 'Book',
-      component: Book
+      component: Book,
     },
     {
       path: '/Music',
@@ -32,5 +32,10 @@ export default new Router({
       name: 'Talk',
       component: Talk
     },
+    {
+      path:"/book/detail",
+      name:"bookdetail",
+      component:()=>import("./views/Book/BookDetail.vue")
+    }
   ]
 })

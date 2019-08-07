@@ -1,0 +1,25 @@
+<script>
+var obj = {
+
+    name:"zhangsan",
+ 
+    sayName:function(){
+ 
+      console.info(this.name);
+ 
+    }
+ 
+  }
+ 
+  var wfunc = obj.sayName;
+ 
+  obj.sayName();
+ 
+  wfunc();
+ 
+  var name = "lisi";
+ 
+  obj.sayName();
+ 
+  wfunc();
+  </script>
