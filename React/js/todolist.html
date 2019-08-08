@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./react.development.js"></script>
+    <script src="./react-dom.development.js"></script>
+    <script src="./babel.min.js"></script>
+    <style>
+        .table {
+            width: 80%;
+            margin: 70px auto;
+            text-align: center;
+        }
+
+        .form-inline {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #input1 input {
+            width: 350px;
+        }
+
+        #input2 input {
+            width: 350px;
+            margin-left: 20px;
+        }
+
+        #input3 input {
+            width: 340px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+    <script type="text/babel">
+      class Form extends React.Component{
+            constructor(props){
+            super(props) 
+            this.anotherList={
+                name:"",
+                date:"",
+                time:"",
+            }
+              this.state={   
+             todoList:[
+                {
+                    name:"上课",
+                    date:"2018-09-14",
+                    time:"2",
+                },
+                {
+                    name:"吃饭",
+                    date:"2018-09-14",
+                    time:"2",
+                },
+                {
+                    name:"午休",
+                    date:"2018-09-14",
+                    time:"2",
+                },
+                {
+                    name:"篮球",
+                    date:"2018-09-14",
+                    time:"2",
+                },
+                {
+                    name:"聚会",
+                    date:"2018-09-14",
+                    time:"2",
+                },
+                {
+                    name:"上课",
+                    date:"2018-09-14",
+                    time:"2",
+                },  
+             ]
+          }
+          this.Namechange=this.Namechange.bind(this)
+          this.Datechange=this.Datechange.bind(this)
+          this.Timechange=this.Timechange.bind(this)
+          this.add=this.add.bind(this)
+          }
+        Namechange(event){
+           this.anotherList.name=event.target.value
+            // console.log(this.anotherList.name);
+        }
+        Datechange(event){
+           this.anotherList.date=event.target.value
+            // console.log(this.anotherList.date);
+        }
+        Timechange(event){
+           this.anotherList.time=event.target.value
+            // console.log(this.anotherList.time);
+        }
+        add(){
+            this.setState({
+                todoList:this.state.todoList.push(this.anotherList)
+            })
+        }
+         render() {
+            let List=this.state.todoList.map((item,index)=>{
+                // console.log(item,index);
+                return(
+                    <tr key={index}>
+                    <th scope="row"><input type='checkbox'/></th>
+                    <td >{item.name}</td>
+                    <td >{item.date}</td>
+                    <td >{item.time}</td>
+                    <td ><button>删除</button></td>
+                    </tr>
+                )
+            })
+             return(
+             <div>
+                <form className="form-inline">
+                    <div className="form-group mb-2" id="input1" onChange={this.Namechange}>
+                    <input type="text" className="form-control"/>
+            </div>
+            <div className="form-group mb-2" id="input2" onChange={this.Datechange}>
+                <input type="date"  className="form-control"/>
+            </div>
+            <div className="form-group mx-sm-3 mb-2" id='input3' onChange={this.Timechange}>
+                <input type="text" className="form-control"/>
+            </div>
+            <button type="button" className="btn btn-primary mb-2" onClick={this.add}> 添加</button>
+            </form>              
+    <table className="table">
+        <thead className="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">待办事项</th>
+            <th scope="col">待办时间</th>
+            <th scope="col">预计用时</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+            {List}
+        </tbody>
+      </table>
+    </div>
+             )
+         }
+      }
+      ReactDOM.render(
+        <Form/>,
+        document.getElementById("root")
+      )
+      </script>
+</body>
+
+</html>

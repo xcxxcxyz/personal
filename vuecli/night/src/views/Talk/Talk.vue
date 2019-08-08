@@ -2,8 +2,12 @@
   <div class="Talk">
         <div class="talk-text">
             <div class="talk-list" v-for="item in talkList" :key="item.answer">
-                <div class="as">{{item.answer}}</div>
-                <div class="qu">{{item.question}}</div>
+                <div class="qu">
+                    <p>{{item.question}} </p>
+                </div>
+                 <div class="as"><br/>
+                    <p> {{item.answer}}</p>
+                </div>
             </div>
         </div>
     <div class="talk-form">
@@ -15,6 +19,18 @@
 <style scoped>
 *{
     font-size: 20px;
+}
+.as{
+    width: 100%
+}
+.as p{
+    float: left;
+}
+.qu{
+    width: 100%;
+}
+.qu p {
+    float: right;
 }
 .talk-text{
     height: 520px;
