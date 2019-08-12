@@ -70,6 +70,7 @@ export default {
     width: 100%;
     height: 1rem;
     background-color: rgb(33, 150, 243);
+    z-index: 10000;
 }
 #nav ul{
     display: flex;
@@ -91,6 +92,7 @@ export default {
     text-align: center;
     color: aliceblue;
     line-height: .6rem;
+    z-index: 10000;
 }
 #foot p{
     position: absolute;
